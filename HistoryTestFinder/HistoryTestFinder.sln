@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryTestFinder.Application", "HistoryTestFinder.Application\HistoryTestFinder.Application.csproj", "{99315C1F-D2EB-4046-BD02-C670A72C3F05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryTestFinder.Data", "HistoryTestFinder.Data\HistoryTestFinder.Data.csproj", "{5F2B29DD-F6B8-4A4D-AC88-8248C795C21E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryTestFinder.Business", "HistoryTestFinder.Business\HistoryTestFinder.Business.csproj", "{AE8967CB-8738-458B-8F61-36ACB84449E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{99315C1F-D2EB-4046-BD02-C670A72C3F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99315C1F-D2EB-4046-BD02-C670A72C3F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99315C1F-D2EB-4046-BD02-C670A72C3F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F2B29DD-F6B8-4A4D-AC88-8248C795C21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F2B29DD-F6B8-4A4D-AC88-8248C795C21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F2B29DD-F6B8-4A4D-AC88-8248C795C21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F2B29DD-F6B8-4A4D-AC88-8248C795C21E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8967CB-8738-458B-8F61-36ACB84449E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8967CB-8738-458B-8F61-36ACB84449E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8967CB-8738-458B-8F61-36ACB84449E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8967CB-8738-458B-8F61-36ACB84449E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
