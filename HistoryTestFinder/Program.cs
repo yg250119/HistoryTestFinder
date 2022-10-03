@@ -18,8 +18,8 @@ namespace HistoryFinder
                     //"01_Add_items_and_get_one_free",
                     //"02_Proximity_Message",
                     //"03_5perc_Discount_on_Total_ticket_Free_item"
-                    "non_ecc_back_and_front_endorsement",
-                    "01_xlr_9406_CouponReducesTaxAmountBrooklyn"
+                    "03_xlr_8539_ea_item_quantity_including_fraction",
+                    //"01_xlr_9406_CouponReducesTaxAmountBrooklyn"
                 };
 
             const string headline = "Name, Passed or Failed, Date, Execution time, Reason of failure, Link";
@@ -64,19 +64,26 @@ namespace HistoryFinder
                     var td = doc.DocumentNode.SelectNodes("//tr//td").Where(x => x.InnerText.Contains(testName)).FirstOrDefault();
                     if (td == null)
                         return;
-                    var tr = td.ParentNode;
-                    var urlPrefix = @"https://storage.googleapis.com/com-emerald-ccmoffice-cug01-qa_cloudbuild/newman-hack8-tests-nightly/10.10." +
-                        i.ToString() + @"/";
-                    testEntities[testName].Add(new TestEntity
+                    try
                     {
-                        Id = i,
-                        TestName = tr.ChildNodes[0].InnerText,
-                        PassedOrFailed = tr.ChildNodes[1].InnerText.ToLower().Contains("pass"),
-                        Link = urlPrefix + tr.ChildNodes[1].ChildNodes[1].Attributes[0].Value,
-                        ReasonOfFailure = "\"" + tr.ChildNodes[2].InnerText.Replace("\r", string.Empty).Replace("\n", string.Empty) + "\"",
-                        TestDatetime = DateTime.Parse(tr.ChildNodes[3].InnerText.Replace("\r", string.Empty).Replace("\n", string.Empty)),
-                        ExecutionTime = double.Parse(tr.ChildNodes[4].InnerText)
-                    });
+                        var tr = td.ParentNode;
+                        var urlPrefix = @"https://storage.googleapis.com/com-emerald-ccmoffice-cug01-qa_cloudbuild/newman-hack8-tests-nightly/10.10." +
+                            i.ToString() + @"/";
+                        testEntities[testName].Add(new TestEntity
+                        {
+                            Id = i,
+                            TestName = tr.ChildNodes[0].InnerText,
+                            PassedOrFailed = tr.ChildNodes[1].InnerText.ToLower().Contains("pass"),
+                            Link = urlPrefix + tr.ChildNodes[1].ChildNodes[1].Attributes[0].Value,
+                            ReasonOfFailure = "\"" + tr.ChildNodes[2].InnerText.Replace("\r", string.Empty).Replace("\n", string.Empty) + "\"",
+                            TestDatetime = DateTime.Parse(tr.ChildNodes[3].InnerText.Replace("\r", string.Empty).Replace("\n", string.Empty)),
+                            ExecutionTime = double.Parse(tr.ChildNodes[4].InnerText)
+                        });
+                    }
+                    catch
+                    {
+                        return;
+                    }
                 });
                 testEntities[testName] = testEntities[testName].OrderBy(x => x.Id).ToList();
                 foreach (var testEntity in testEntities[testName])
