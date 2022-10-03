@@ -49,6 +49,9 @@ namespace HistoryFinder
 
             Parallel.ForEach(tests, testName =>
             {
+                //if folder "C\\Reports" doesn't exist, create
+
+
                 var filePath = "C:\\Reports\\report " + testName + ".csv";
                 csv[testName].AppendLine(headline);
                 Console.WriteLine(testName);
