@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HistoryTestFinder.Business\HistoryTestFinder.Business.csproj" />
+  </ItemGroup>
+
 </Project>

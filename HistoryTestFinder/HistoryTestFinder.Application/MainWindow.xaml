@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HistoryTestFinder.Application"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="HTF - History Test Finder" Height="400" Width="392">
+    <StackPanel HorizontalAlignment="Center">
+        <Label Content="Enter Test Name:"/>
+        <TextBox Width="378" Height="27"/>
+        <Button x:Name="submitButton" Content="Run" Width="138" Height="26"/>
+    </StackPanel>
 </Window>
