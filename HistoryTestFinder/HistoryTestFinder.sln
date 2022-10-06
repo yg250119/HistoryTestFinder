@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryTestFinder.Application", "HistoryTestFinder.Application\HistoryTestFinder.Application.csproj", "{99315C1F-D2EB-4046-BD02-C670A72C3F05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HistoryTestFinder.Application", "HistoryTestFinder.Application\HistoryTestFinder.Application.csproj", "{99315C1F-D2EB-4046-BD02-C670A72C3F05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryTestFinder.Data", "HistoryTestFinder.Data\HistoryTestFinder.Data.csproj", "{5F2B29DD-F6B8-4A4D-AC88-8248C795C21E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HistoryTestFinder.Data", "HistoryTestFinder.Data\HistoryTestFinder.Data.csproj", "{5F2B29DD-F6B8-4A4D-AC88-8248C795C21E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryTestFinder.Business", "HistoryTestFinder.Business\HistoryTestFinder.Business.csproj", "{AE8967CB-8738-458B-8F61-36ACB84449E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HistoryTestFinder.Business", "HistoryTestFinder.Business\HistoryTestFinder.Business.csproj", "{AE8967CB-8738-458B-8F61-36ACB84449E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryTestFinder.Infrastructure", "HistoryTestFinder.Infrastructure\HistoryTestFinder.Infrastructure.csproj", "{643DD68C-7DA3-4CD0-B271-E08FF478AC50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{AE8967CB-8738-458B-8F61-36ACB84449E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE8967CB-8738-458B-8F61-36ACB84449E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE8967CB-8738-458B-8F61-36ACB84449E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{643DD68C-7DA3-4CD0-B271-E08FF478AC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{643DD68C-7DA3-4CD0-B271-E08FF478AC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{643DD68C-7DA3-4CD0-B271-E08FF478AC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{643DD68C-7DA3-4CD0-B271-E08FF478AC50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

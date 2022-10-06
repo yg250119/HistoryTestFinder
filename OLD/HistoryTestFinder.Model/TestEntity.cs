@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace HistoryFinder.Model
 {
@@ -14,7 +15,7 @@ namespace HistoryFinder.Model
 
         public override string ToString() {
             var strPassedOrFailed = PassedOrFailed ? "Pass" : "Fail";
-            return string.Format("{0},{1},{2},{3},{4},{5}", TestName, strPassedOrFailed, TestDatetime.Date, ExecutionTime, ReasonOfFailure, Link);
+            return string.Format("{0},{1},{2},{3},{4},{5}", TestName, strPassedOrFailed, TestDatetime.ToString("g", CultureInfo.GetCultureInfo("es-ES")), ExecutionTime, ReasonOfFailure, Link);
         }
 
     }

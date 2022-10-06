@@ -18,8 +18,9 @@ namespace HistoryFinder
                     //"01_Add_items_and_get_one_free",
                     //"02_Proximity_Message",
                     //"03_5perc_Discount_on_Total_ticket_Free_item"
-                    "03_xlr_8539_ea_item_quantity_including_fraction",
+                    //"03_xlr_8539_ea_item_quantity_including_fraction",
                     //"01_xlr_9406_CouponReducesTaxAmountBrooklyn"
+                    "02_xlr_8098_WeightItemsIncludingTareLinkedItem"
                 };
 
             const string headline = "Name, Passed or Failed, Date, Execution time, Reason of failure, Link";
@@ -52,7 +53,7 @@ namespace HistoryFinder
                 //if folder "C\\Reports" doesn't exist, create
 
 
-                var filePath = "C:\\Reports\\report " + testName + ".csv";
+                var filePath = "C:\\Reports\\report Old Program " + testName + ".csv";
                 csv[testName].AppendLine(headline);
                 Console.WriteLine(testName);
                 Console.WriteLine();
